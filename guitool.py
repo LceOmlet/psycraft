@@ -40,7 +40,7 @@ class App(tk.Frame):
             self.utterances.append(self.current_item.copy())
             self.utterances[-1]["history"] = utterance
             self.utterances[-1]["num"] = self.corpus_pointer
-            if(self.pointer_position < self.prev_converLength):
+            if(self.pointer_position < self.converLength):
                 self.utterances_del_counter += 1
                 self.corpus_pointer -= 1
                 self.jump_stack.append(self.jump_counter)
